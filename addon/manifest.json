@@ -1,0 +1,25 @@
+{
+  "aahext": 1,
+  "hubApi": 1,
+  "id": "com.jpmm.jpmm-bp-cloner",
+  "name": "BP Cloner",
+  "vendor": "jpmm",
+  "version": "0.1.0",
+  "namespace": "jpmm-bp-cloner",
+  "kind": "python",
+  "entry": "bp_cloner",
+  "requires": {
+    "python": "3.9"
+  },
+  "access": {
+    "hosts": [],
+    "files": "none",
+    "macos": [],
+    "network": {
+      "local": {
+        "send": {"tcp": [47811]}
+      }
+    }
+  },
+  "notes": "Drives the BP Cloner capture app on this Mac: builds a chain of plugins (named as AiAudioHub's plug-in library lists them), sets their parameters, runs captures and reads their fidelity results. It only talks to the BP Cloner app on this same Mac, through its local control port (TCP 47811 on 127.0.0.1), so it needs 'send to the local network' for that one port."
+}
